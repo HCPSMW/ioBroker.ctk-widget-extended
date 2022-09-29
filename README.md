@@ -122,11 +122,14 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
 
 ## Changelog
 
+### **WORK IN PROGRESS**
+
 -   (HCPSMW) initial release
 <!--
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
 ### 0.0.3 (2022-09-29)
 
 -   (HCPSMW) initial release
