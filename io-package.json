@@ -1,153 +1,165 @@
 {
-    "common": {
-        "name": "ctk-widget-extended",
-        "version": "0.0.3",
-        "news": {
-            "0.0.3": {
-                "en": "initial release",
-                "de": "erstausstrahlung",
-                "ru": "начальный выпуск",
-                "pt": "lançamento inicial",
-                "nl": "niet",
-                "fr": "initial release",
-                "it": "rilascio iniziale",
-                "es": "liberación inicial",
-                "pl": "pierwsze wydanie",
-                "zh-cn": "初步释放"
-            },
-            "0.0.2": {
-                "en": "initial release",
-                "de": "erstausstrahlung",
-                "ru": "начальный выпуск",
-                "pt": "lançamento inicial",
-                "nl": "niet",
-                "fr": "initial release",
-                "it": "rilascio iniziale",
-                "es": "liberación inicial",
-                "pl": "pierwsze wydanie",
-                "zh-cn": "初步释放"
-            },
-            "0.0.1": {
-                "en": "initial release",
-                "de": "Erstveröffentlichung",
-                "ru": "Начальная версия",
-                "pt": "lançamento inicial",
-                "nl": "Eerste uitgave",
-                "fr": "Première version",
-                "it": "Versione iniziale",
-                "es": "Versión inicial",
-                "pl": "Pierwsze wydanie",
-                "zh-cn": "首次出版"
-            }
-        },
-        "title": "CTK Widgets",
-        "titleLang": {
-            "en": "CTK Widgets",
-            "de": "CTK-Widgets",
-            "ru": "Виджеты ЧТК",
-            "pt": "Widgets CTK",
-            "nl": "CTK-widgets",
-            "fr": "Widgets CTK",
-            "it": "Widget CTK",
-            "es": "Widgets CTK",
-            "pl": "Widżety CTK",
-            "zh-cn": "CTK 小部件"
-        },
-        "desc": {
-            "en": "Vis erweiterung",
-            "de": "Vis-Erweiterung",
-            "ru": "Vis erweiterung",
-            "pt": "Vis erweiterung",
-            "nl": "Vis erweiterung",
-            "fr": "Vis erweiterung",
-            "it": "Vis erweiterung",
-            "es": "Vis erweiterung",
-            "pl": "Widoczność",
-            "zh-cn": "可见性"
-        },
-        "authors": [
-            "HCPSMW <sebastian.wien@ctk-gmbh.de>"
-        ],
-        "keywords": [
-            "lists"
-        ],
-        "license": "MIT",
-        "platform": "Javascript/Node.js",
-        "main": "main.js",
-        "icon": "ctk-widget-extended.png",
-        "enabled": true,
-        "extIcon": "https://raw.githubusercontent.com/HCPSMW/ioBroker.ctk-widget-extended/main/admin/ctk-widget-extended.png",
-        "readme": "https://github.com/HCPSMW/ioBroker.ctk-widget-extended/blob/main/README.md",
-        "loglevel": "info",
-        "restartAdapters": [
-            "vis"
-        ],
-        "mode": "daemon",
-        "type": "visualization",
-        "compact": true,
-        "connectionType": "local",
-        "dataSource": "poll",
-        "adminUI": {
-            "config": "materialize",
-            "tab": "materialize"
-        },
-        "adminTab": {
-            "singleton": true,
-            "name": {
-                "en": "CTK Widgets",
-                "de": "CTK-Widgets",
-                "ru": "Виджеты ЧТК",
-                "pt": "Widgets CTK",
-                "nl": "CTK-widgets",
-                "fr": "Widgets CTK",
-                "it": "Widget CTK",
-                "es": "Widgets CTK",
-                "pl": "Widżety CTK",
-                "zh-cn": "CTK 小部件"
-            },
-            "link": "",
-            "fa-icon": "info"
-        },
-        "supportCustoms": true,
-        "eraseOnUpload": true,
-        "dependencies": [
-            {
-                "js-controller": ">=3.3.22"
-            },
-            "vis"
-        ],
-        "globalDependencies": [
-            {
-                "admin": ">=5.0.0"
-            }
-        ]
+  "common": {
+    "name": "ctk-widget-extended",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "* initial release\n<!--\n\tPlaceholder for the next version (at the beginning of the line):\n\t### **WORK IN PROGRESS**\n-->",
+        "de": "* erste veröffentlichung\n<!--\nPlatzhalter für die nächste Version (am Anfang der Linie:)\n# *WORK IN PROGRESS*\n-->",
+        "ru": "* начальный релиз\n<!--\nPlaceholder for the next version (в начале строки:)\n# *WORK В ПРОГРЕССЕ*\n-->",
+        "pt": "* versão inicial\n<!--\nPlaceholder para a próxima versão (no início da linha:)\n*TRABALHAR EM FAVOR*\n-->",
+        "nl": "♪ initial release\n<!--\nPlacehouder voor de volgende versie (in het begin van de lijn)\n♪WORK IN PROGRES ♪\n-->",
+        "fr": "* version initiale\n<!--\nPlaceholder for the next version (at the beginning of the line:)\n*WORK IN PROGRESS*\n-->",
+        "it": "* rilascio iniziale\n<!--\nPortaposto per la prossima versione (all'inizio della linea:)\n#\n-->",
+        "es": "* liberación inicial\n<!--\nTitular para la próxima versión (al principio de la línea:)\n*WORK IN PROGRESS*\n-->",
+        "pl": "* initial release\n<!--\nMiejscem kolejnej wersji (na początku linii:)\nWORK IN PROGRESS* (ANG.)\n-->",
+        "zh-cn": "* 初次报告\n<!--\n下文本的持有人(开始线:)\n行动*\n-->"
+      },
+      "0.0.3": {
+        "en": "initial release",
+        "de": "erstausstrahlung",
+        "ru": "начальный выпуск",
+        "pt": "lançamento inicial",
+        "nl": "niet",
+        "fr": "initial release",
+        "it": "rilascio iniziale",
+        "es": "liberación inicial",
+        "pl": "pierwsze wydanie",
+        "zh-cn": "初步释放"
+      },
+      "0.0.2": {
+        "en": "initial release",
+        "de": "erstausstrahlung",
+        "ru": "начальный выпуск",
+        "pt": "lançamento inicial",
+        "nl": "niet",
+        "fr": "initial release",
+        "it": "rilascio iniziale",
+        "es": "liberación inicial",
+        "pl": "pierwsze wydanie",
+        "zh-cn": "初步释放"
+      },
+      "0.0.1": {
+        "en": "initial release",
+        "de": "Erstveröffentlichung",
+        "ru": "Начальная версия",
+        "pt": "lançamento inicial",
+        "nl": "Eerste uitgave",
+        "fr": "Première version",
+        "it": "Versione iniziale",
+        "es": "Versión inicial",
+        "pl": "Pierwsze wydanie",
+        "zh-cn": "首次出版"
+      }
     },
-    "native": {
-        "option1": true,
-        "option2": "42"
+    "title": "CTK Widgets",
+    "titleLang": {
+      "en": "CTK Widgets",
+      "de": "CTK-Widgets",
+      "ru": "Виджеты ЧТК",
+      "pt": "Widgets CTK",
+      "nl": "CTK-widgets",
+      "fr": "Widgets CTK",
+      "it": "Widget CTK",
+      "es": "Widgets CTK",
+      "pl": "Widżety CTK",
+      "zh-cn": "CTK 小部件"
     },
-    "objects": [],
-    "instanceObjects": [
-        {
-            "_id": "info",
-            "type": "channel",
-            "common": {
-                "name": "Information"
-            },
-            "native": {}
-        },
-        {
-            "_id": "info.connection",
-            "type": "state",
-            "common": {
-                "role": "indicator.connected",
-                "name": "Device or service connected",
-                "type": "boolean",
-                "read": true,
-                "write": false,
-                "def": false
-            },
-            "native": {}
-        }
+    "desc": {
+      "en": "Vis erweiterung",
+      "de": "Vis-Erweiterung",
+      "ru": "Vis erweiterung",
+      "pt": "Vis erweiterung",
+      "nl": "Vis erweiterung",
+      "fr": "Vis erweiterung",
+      "it": "Vis erweiterung",
+      "es": "Vis erweiterung",
+      "pl": "Widoczność",
+      "zh-cn": "可见性"
+    },
+    "authors": [
+      "HCPSMW <sebastian.wien@ctk-gmbh.de>"
+    ],
+    "keywords": [
+      "lists"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "ctk-widget-extended.png",
+    "enabled": true,
+    "extIcon": "https://raw.githubusercontent.com/HCPSMW/ioBroker.ctk-widget-extended/main/admin/ctk-widget-extended.png",
+    "readme": "https://github.com/HCPSMW/ioBroker.ctk-widget-extended/blob/main/README.md",
+    "loglevel": "info",
+    "restartAdapters": [
+      "vis"
+    ],
+    "mode": "daemon",
+    "type": "visualization",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "materialize",
+      "tab": "materialize"
+    },
+    "adminTab": {
+      "singleton": true,
+      "name": {
+        "en": "CTK Widgets",
+        "de": "CTK-Widgets",
+        "ru": "Виджеты ЧТК",
+        "pt": "Widgets CTK",
+        "nl": "CTK-widgets",
+        "fr": "Widgets CTK",
+        "it": "Widget CTK",
+        "es": "Widgets CTK",
+        "pl": "Widżety CTK",
+        "zh-cn": "CTK 小部件"
+      },
+      "link": "",
+      "fa-icon": "info"
+    },
+    "supportCustoms": true,
+    "eraseOnUpload": true,
+    "dependencies": [
+      {
+        "js-controller": ">=3.3.22"
+      },
+      "vis"
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=5.0.0"
+      }
     ]
+  },
+  "native": {
+    "option1": true,
+    "option2": "42"
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Device or service connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
 }
