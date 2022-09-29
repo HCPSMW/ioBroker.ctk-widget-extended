@@ -794,4 +794,4 @@ vis.binds["ctk-widget-extendedcontroller"] = {
 	},
 };
 
-vis.binds["ctk-widget-extended2"].showVersion();
+vis.binds["ctk-widget-extendedcontroller"].showVersion();
