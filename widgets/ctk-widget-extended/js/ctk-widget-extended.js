@@ -51,7 +51,7 @@ vis.binds["ctk-widget-extended"] = {
 		text += "extraAttr: " + data.extraAttr + "<br>";
 		text += "Browser instance: " + vis.instance + "<br>";
 		text += 'htmlText: <textarea readonly style="width:100%">' + (data.htmlText || "") + "</textarea><br>";
-		text += "htmlText2: <span>s" + (data.htmlText || "") + "</span><br>";
+		text += "htmlText2: <span>aas" + (data.htmlText || "") + "</span><br>";
 
 		$("#" + widgetID).html(text);
 
@@ -74,8 +74,8 @@ vis.binds["ctk-widget-extended2"] = {
 	version: "0.0.3",
 	showVersion: function () {
 		if (vis.binds["ctk-widget-extended2"].version) {
-			console.log("Version ctk-widget-extended: " + vis.binds["ctk-widget-extended"].version);
-			vis.binds["ctk-widget-extended"].version = null;
+			console.log("Version ctk-widget-extended: " + vis.binds["ctk-widget-extended2"].version);
+			vis.binds["ctk-widget-extended2"].version = null;
 		}
 	},
 	createWidget: function (widgetID, view, data, style) {
@@ -83,7 +83,7 @@ vis.binds["ctk-widget-extended2"] = {
 		// if nothing found => wait
 		if (!$div.length) {
 			return setTimeout(function () {
-				vis.binds["ctk-widget-extended"].createWidget(widgetID, view, data, style);
+				vis.binds["ctk-widget-extended2"].createWidget(widgetID, view, data, style);
 			}, 100);
 		}
 
@@ -94,7 +94,7 @@ vis.binds["ctk-widget-extended2"] = {
 		text += "extraAttr: " + data.extraAttr + "<br>";
 		text += "Browser instance: " + vis.instance + "<br>";
 		text += 'htmlText: <textarea readonly style="width:100%">' + (data.htmlText || "") + "</textarea><br>";
-		text += "htmlText2: <span>s" + (data.htmlText || "") + "</span><br>";
+		text += "htmlText200: <span>s" + (data.htmlText || "") + "</span><br>";
 
 		$("#" + widgetID).html(text);
 
