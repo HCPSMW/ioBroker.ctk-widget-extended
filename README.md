@@ -130,6 +130,8 @@ Please refer to the [`dev-server` documentation](https://github.com/ioBroker/dev
 
 ### **WORK IN PROGRESS**
 
+-   (HCPSMW) initial release
+
 ### 0.0.2 (2022-09-29)
 
 -   (HCPSMW) initial release
