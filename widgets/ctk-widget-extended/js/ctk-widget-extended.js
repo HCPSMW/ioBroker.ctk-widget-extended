@@ -83,12 +83,12 @@ class List {
 	}
 
 	//Add item to list
-	append = (element) => {
+	append(element) {
 		this.items[this.listSize++] = element;
-	};
+	}
 
 	//Find item in the list
-	find = (element) => {
+	find(element) {
 		if (typeof element === "object" && element !== null) {
 			for (let i = 0; i < this.listSize; i++) {
 				if (Object.entries(this.items[i]).toString() === Object.entries(element).toString()) {
@@ -103,11 +103,11 @@ class List {
 			}
 		}
 		return -1;
-	};
+	}
 
 	//Remove item from the list
-	remove = (element) => {
-		let index = this.find(element);
+	remove(element) {
+		var index = this.find(element);
 
 		if (index > -1) {
 			this.items.splice(index, 1);
@@ -116,11 +116,11 @@ class List {
 		}
 
 		return false;
-	};
+	}
 
 	//Insert item at specific position in the list
-	insert = (element, after) => {
-		let insertPos = this.find(after);
+	insert(element, after) {
+		var insertPos = this.find(after);
 
 		if (insertPos > -1) {
 			this.items.splice(insertPos + 1, 0, element);
@@ -129,71 +129,71 @@ class List {
 		}
 
 		return false;
-	};
+	}
 
 	//Check if items is there in list
-	contains = (element) => {
-		let index = this.find(element);
+	contains(element) {
+		var index = this.find(element);
 		return index > -1 ? true : false;
-	};
+	}
 
 	//Move to the front of the list
-	front = () => {
+	front() {
 		this.pos = 0;
-	};
+	}
 
 	//Move to the end of the list
-	rear = () => {
+	rear() {
 		this.pos = this.listSize - 1;
-	};
+	}
 
 	//Move to the prev item in the list
-	prev = () => {
+	prev() {
 		if (this.pos > 0) {
 			--this.pos;
 		}
-	};
+	}
 
 	//Move to the next item in the list
-	next = () => {
+	next() {
 		if (this.pos < this.listSize - 1) {
 			++this.pos;
 		}
-	};
+	}
 
 	//Return the currentPos in the list
-	currPos = () => {
+	currPos() {
 		return this.pos;
-	};
+	}
 
 	//Move to any particular position in the list
-	moveTo = (pos) => {
+	moveTo(pos) {
 		if (pos > 0 && pos <= this.listSize) {
 			this.pos = pos - 1;
 		}
-	};
+	}
 
 	//Get the current element in the list
-	getElement = () => {
+	getElement() {
 		return this.items[this.pos];
-	};
+	}
 
 	//Size of the list
-	size = () => {
+	size() {
 		return this.listSize;
-	};
+	}
 
 	//Print the list
-	print = () => {
+	print() {
 		return this.items.join(",");
-	};
+	}
 
 	//Clear the list
-	clear = () => {
+	clear() {
 		this.listSize = 0;
 		this.pos = 0;
 		this.items = [];
-	};
+	}
 }
 //#endregion
 
@@ -206,8 +206,8 @@ function createEnum(values) {
 }
 
 // { Up: 'Up', louvre: 'louvre', Left: 'Left', Right: 'Right' }
-let enumy = createEnum(["up", "down", "light", "louvre", "room"]);
-let temperaturenumy = createEnum(["sollTemp", "istTemp"]);
+var enumy = createEnum(["up", "down", "light", "louvre", "room"]);
+var temperaturenumy = createEnum(["sollTemp", "istTemp"]);
 
 //#region classes
 class Light {
@@ -263,13 +263,13 @@ class TempCollection {
 const ids = ["R0", "R1", "R2", "R3"];
 const names = ["Outdoor", "R001", "R002", "R003"];
 
-let roomlist = new List();
+var roomlist = new List();
 roomlist.append(new RoomMod(ids[0], names[0], enumy.room));
 roomlist.append(new RoomMod(ids[1], names[1], enumy.room));
 roomlist.append(new RoomMod(ids[2], names[2], enumy.room));
 roomlist.append(new RoomMod(ids[3], names[3], enumy.room));
 
-let lightlist = new List();
+var lightlist = new List();
 lightlist.append(new Light("modbus.01", "Schalter 1", ids[0]));
 lightlist.append(new Light("modbus.02", "Schalter 2", ids[0]));
 lightlist.append(new Light("modbus.03", "Schalter 1", ids[1]));
@@ -285,7 +285,7 @@ lightlist.append(new Light("modbus.11", "Schalter 1", ids[3]));
 lightlist.append(new Light("modbus.12", "Schalter 2", ids[3]));
 lightlist.append(new Light("modbus.13", "Schalter 3", ids[3]));
 
-let louvrelist = new List();
+var louvrelist = new List();
 louvrelist.append(new Louvre("modbus.01", "Schalter 1", ids[0]));
 louvrelist.append(new Louvre("modbus.02", "Schalter 2", ids[0]));
 louvrelist.append(new Louvre("modbus.03", "Schalter 1", ids[1]));
@@ -296,9 +296,9 @@ louvrelist.append(new Louvre("modbus.07", "Schalter 2", ids[2]));
 louvrelist.append(new Louvre("modbus.08", "Schalter 1", ids[3]));
 louvrelist.append(new Louvre("modbus.09", "Schalter 2", ids[3]));
 
-let temperaturliste = new List();
-let a = 0;
-for (let inde = 0; inde > ids.length; inde++) {
+var temperaturliste = new List();
+var a = 0;
+for (let inde = 0; inde < ids.length; inde++) {
 	temperaturliste.append(
 		new Temperatur(ids[inde].toString(), a++, "modbus.1.holdingregisters.2911" + a + "_temp" + a, false),
 	);
@@ -306,7 +306,7 @@ for (let inde = 0; inde > ids.length; inde++) {
 		new Temperatur(ids[inde].toString(), a++, "modbus.1.holdingregisters.2911" + a + "_temp" + a, true),
 	);
 }
-let tempcollectionlist = new List();
+var tempcollectionlist = new List();
 ids.forEach((element) => {
 	tempcollectionlist.append(
 		new TempCollection(
@@ -697,9 +697,9 @@ vis.binds["ctk-widget-extendedcontroller"] = {
 			room.louvres = louvrelist.items.filter((x) => x.roomid == room.id);
 			Louvre_Element.textContent = room.louvres.length + " Louvre";
 
-			let lightroomlist = new List();
+			var lightroomlist = new List();
 			lightroomlist.items = room.lights;
-			let louvreroomlist = new List();
+			var louvreroomlist = new List();
 			louvreroomlist.items = room.louvres;
 
 			console.info(roomlist.items[index]);
@@ -716,7 +716,7 @@ vis.binds["ctk-widget-extendedcontroller"] = {
 					/////LICHTER
 					console.info(currentlight);
 					var newlightelement = LightHTML;
-					let agge = (-89 + 38 * indexlight).toString();
+					var agge = (-89 + 38 * indexlight).toString();
 					newlightelement = newlightelement.replace(
 						`transform="translate(-89 -21)"`,
 						`transform="translate(` + agge + ` -21)"`,
@@ -754,7 +754,7 @@ vis.binds["ctk-widget-extendedcontroller"] = {
 					var newlouvreelement = document.createElementNS("http://www.w3.org/2000/svg", "g");
 					newlouvreelement.innerHTML = LouvreHTML;
 					// var newlouvreelement = LouvreHTML;
-					let agge = (0 + 38 * indexlouvre).toString();
+					agge = (0 + 38 * indexlouvre).toString();
 					// newlouvreelement = newlouvreelement.replace(`transform="translate(0 -99)"`, `transform="translate(` + agge + ` -99)"`);
 					LouvreBoxGroup_Element.appendChild(newlouvreelement);
 					const added_LouvreElement = document.getElementById("Percent_Box_Element");
