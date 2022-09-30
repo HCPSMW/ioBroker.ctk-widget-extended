@@ -150,11 +150,11 @@
 	data-vis-type="controller"
 	data-vis-name="Control"
 >
-		<div id="app"></div>
-<div class="vis-widget <%== this.data.attr('class') %>" style="overflow:visible; width: 230px; height: 210px" id="<%= this.data.attr('wid') %>"><%
-		vis.binds['ctk-widget-extendedcontroller'].createWidget(this.data.wid, this.view, this.data, this.style);
-		%>
+			<div class="vis-widget <%== this.data.attr('class') %>" style="overflow:visible; width: 230px; height: 210px" id="app"></div>
+	<div  id="<%= this.data.attr('wid') %>"><%
+			vis.binds['ctk-widget-extendedcontroller'].createWidget(this.data.wid, this.view, this.data, this.style);
+			%>
 
 
-		</div>
+			</div>
 </script>
