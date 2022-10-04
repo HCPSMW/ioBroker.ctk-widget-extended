@@ -1,8 +1,20 @@
 {
   "common": {
     "name": "ctk-widget-extended",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
+      "0.1.1": {
+        "en": "Save",
+        "de": "Speichern",
+        "ru": "Сохранить",
+        "pt": "Salvar",
+        "nl": "Red",
+        "fr": "Save",
+        "it": "Salva",
+        "es": "Guardar",
+        "pl": "Save",
+        "zh-cn": "拯救"
+      },
       "0.1.0": {
         "en": "* initial release\n<!--\n\tPlaceholder for the next version (at the beginning of the line):\n\t### **WORK IN PROGRESS**\n-->",
         "de": "* erste veröffentlichung\n<!--\nPlatzhalter für die nächste Version (am Anfang der Linie:)\n# *WORK IN PROGRESS*\n-->",
