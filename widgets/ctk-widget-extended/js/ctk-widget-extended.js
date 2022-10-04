@@ -777,7 +777,7 @@ vis.binds["ctk-widget-extendedcontroller"] = {
 				console.error(ex);
 			}
 		}
-
+		text = document.getElementById("app").innerHTML;
 		$("#" + widgetID).html(text);
 
 		// subscribe on updates of value
